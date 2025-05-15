@@ -5,9 +5,7 @@ from glob import glob
 from tqdm import tqdm
 from typing import Dict
 from .base import BaseDataframeLoader
-from .registry import register_loader
 
-@register_loader('cbis')
 class CBISDataframeLoader(BaseDataframeLoader):
     def __init__(self, data_dir: str):
         super().__init__(data_dir)

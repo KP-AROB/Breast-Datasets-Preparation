@@ -3,9 +3,7 @@ import os, ast
 from .base import BaseDataframeLoader
 from typing import Dict
 from src.utils.errors import *
-from .registry import register_loader
 
-@register_loader('vindr')
 class VindrDataframeLoader(BaseDataframeLoader):
     """
     Vindr-Mammo DataFrame loader.

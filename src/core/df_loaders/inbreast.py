@@ -4,9 +4,7 @@ from .base import BaseDataframeLoader
 from sklearn.model_selection import train_test_split
 from typing import Dict
 from src.utils.errors import *
-from .registry import register_loader
 
-@register_loader('inbreast')
 class INBreastDataframeLoader(BaseDataframeLoader):
     """
     INBreast DataFrame loader.
