@@ -81,4 +81,4 @@ class VindrDataframeLoader(BaseDataframeLoader):
         check_non_empty_df(train_df, "Training Dataframe")
         check_non_empty_df(test_df, "Test DatDataframe")
 
-        return {'train': train_df, 'val': test_df, 'test': test_df}
+        return {'train': train_df, 'val': test_df}

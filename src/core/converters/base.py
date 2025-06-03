@@ -53,8 +53,6 @@ class BaseConverter(ABC):
                             )
                         )
                     
-                    # TODO: Add ProcessPoolExecutor for heavy pipeline
-                    
                     batch_images = [img for img in batch_images if img is not None]
                     pbar.set_description(f"{description_prefix} - Saving batch to HDF5")    
                     filename = os.path.join(output_dir, f"batch_{idx:04d}.h5")

@@ -26,7 +26,16 @@ if __name__ == "__main__":
     logging.info(f'Running {args.dataset_name} dataset preparation')
     
     processing_pipeline = BreastImageProcessingPipeline()
-    dataframes = get_dataframe_loader(args.dataset_name, args.data_dir)
+    dataframe_loader = get_dataframe_loader(args.dataset_name, args.data_dir)
+    dataframes = dataframe_loader.load()
+    logging.info(f'Dataframes loaded: {list(dataframes.keys())}')
     
     converter = get_converter(args.dataset_name, processing_pipeline, args.batch_size, args.n_workers, args.tmp_dir)
-    
+    converter.run(dataframes, args.out_dir)
+    logging.info("Processing completed successfully.")
+    logging.info("You can now use the processed dataset for training or evaluation.")
+    logging.info("Thank you for using the KAPTIOS-AROB-BREAST-DATASETS processing pipeline!")
+    logging.info("For any issues or feedback, please refer to the project's documentation or contact the maintainers.")
+    logging.info("Exiting the script.")
+    logging.info("Goodbye!")
+    logging.shutdown()

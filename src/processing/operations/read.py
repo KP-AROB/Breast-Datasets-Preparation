@@ -12,8 +12,9 @@ def read_dicom(path: str):
     Returns:
         np.array: The loaded image as np.array
     """
-    def operation(_: np.ndarray) -> np.ndarray:
+    try:
         ds = dcmread(path)
         img2d = ds.pixel_array
         return img2d.astype(np.float32)
-    return operation
+    except FileNotFoundError as e:
+        raise RuntimeError(f"File not found: {path}") from e
