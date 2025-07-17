@@ -8,5 +8,6 @@ class BreastImageProcessingPipeline(BasePipeline):
         super().__init__()
         self.operations = [
             read_dicom,
+            crop_to_roi,
             resize,
         ]

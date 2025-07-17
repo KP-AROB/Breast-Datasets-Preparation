@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from .normalize import clahe
+from .normalize import clahe, truncate_normalization
 
 
 def crop_to_roi(image: np.array):
@@ -24,10 +24,12 @@ def crop_to_roi(image: np.array):
     )
     cnt = max(cnts, key=cv2.contourArea)
     x, y, w, h = cv2.boundingRect(cnt)
-    return (original_image[y: y + h, x: x + w], breast_mask[y: y + h, x: x + w])
+    
+    norm_image = truncate_normalization((original_image[y: y + h, x: x + w], breast_mask[y: y + h, x: x + w]))
+    return norm_image
 
 
-def resize(image: np.array, new_size=224):
+def resize(image: np.array, new_size=2012):
     try:
         return cv2.resize(
             image,

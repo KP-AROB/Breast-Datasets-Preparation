@@ -103,14 +103,13 @@ class VindrH5Converter(BaseConverter):
     
     def run(self, dataframes: Dict[str, pd.DataFrame], output_dir: str) -> None:
         for df_name, df in dataframes.items():
-            if df_name != 'train':
-                logging.info(f"Processing {df_name} dataframe")
-                row_indices = df.index.tolist()
-                paths = df['absolute_path'][row_indices]
-                birads = df['breast_birads'][row_indices]
-                lesions = df['finding_categories'][row_indices]
-                save_dir = os.path.join(output_dir, df_name)
-                self._init(paths, save_dir)
-                logging.info(f'Saving files from {df_name} dataframe')
-                self._process_batch(paths, save_dir, birads, lesions)
-                logging.info(f"All batches from dataframe '{df_name}' processed successfully.")
+            logging.info(f"Processing {df_name} dataframe")
+            row_indices = df.index.tolist()
+            paths = df['absolute_path'][row_indices]
+            birads = df['breast_birads'][row_indices]
+            lesions = df['finding_categories'][row_indices]
+            save_dir = os.path.join(output_dir, df_name)
+            self._init(paths, save_dir)
+            logging.info(f'Saving files from {df_name} dataframe')
+            self._process_batch(paths, save_dir, birads, lesions)
+            logging.info(f"All batches from dataframe '{df_name}' processed successfully.")
