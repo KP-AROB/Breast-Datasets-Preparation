@@ -25,7 +25,7 @@ class VindrDataframeLoader(BaseDataframeLoader):
         self.lesions_mapping = {
             'no_finding': '0',
             'mass': '1',
-            'suspicious_calcifications': '2'
+            'suspicious_calcification': '2'
         } if not lesions_mapping else lesions_mapping
     
     def format_char(self, char):
@@ -67,18 +67,9 @@ class VindrDataframeLoader(BaseDataframeLoader):
         df_find.drop_duplicates(subset='image_id', keep=False, inplace=True)
 
         # Replace and filter finding categories
-        target_categories = ['mass', 'no_finding', 'suspicious_calcifications']
+        target_categories = ['mass', 'no_finding', 'suspicious_calcification']
         self.replace_categories(df_find, 'finding_categories', target_categories)
         df_find = df_find[df_find['finding_categories'].isin(target_categories)]
         df_find['finding_categories'] = df_find['finding_categories'].replace(self.lesions_mapping)
 
-        # Add absolute path
-        df_find['absolute_path'] = df_find.apply(self._construct_image_path, axis=1)
-        
-        train_df = df_find[df_find['split'] == 'training']
-        test_df = df_find[df_find['split'] == 'test']
-        
-        check_non_empty_df(train_df, "Training Dataframe")
-        check_non_empty_df(test_df, "Test DatDataframe")
-
-        return {'train': train_df, 'val': test_df}
+        return {'train': df_find, 'val': df_find}
