@@ -27,7 +27,7 @@ def crop_to_roi(image: np.array):
     return original_image[y: y + h, x: x + w]
 
 
-def resize(image: np.array, new_size=1024):
+def resize(image: np.array, new_size=224): #1024
     try:
         return cv2.resize(
             image,

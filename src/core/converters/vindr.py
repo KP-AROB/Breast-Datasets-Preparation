@@ -105,6 +105,7 @@ class VindrH5Converter(BaseConverter):
         for df_name, df in dataframes.items():
             logging.info(f"Processing {df_name} dataframe")
             row_indices = df.index.tolist()
+            print(df.keys())
             paths = df['absolute_path'][row_indices]
             birads = df['breast_birads'][row_indices]
             lesions = df['finding_categories'][row_indices]
