@@ -1,193 +1,0 @@
-2025-07-24 16:49:42,043 - [KAPTIOS-AROB-BREAST-DATASETS] - INFO - Running vindr dataset preparation
-2025-07-24 16:49:43,094 - [KAPTIOS-AROB-BREAST-DATASETS] - INFO - Dataframes loaded: ['train', 'val']
-2025-07-24 16:49:43,094 - [KAPTIOS-AROB-BREAST-DATASETS] - INFO - Processing train dataframe
-2025-07-24 16:49:43,106 - [KAPTIOS-AROB-BREAST-DATASETS] - INFO - Total files: 15273
-2025-07-24 16:49:43,106 - [KAPTIOS-AROB-BREAST-DATASETS] - INFO - Processing in 153 batches of 100
-2025-07-24 16:49:43,106 - [KAPTIOS-AROB-BREAST-DATASETS] - INFO - Using 16 workers
-2025-07-24 16:49:43,106 - [KAPTIOS-AROB-BREAST-DATASETS] - INFO - Output directory: /media/nvidia/DATA2/datasets/prepared/vindr/224_cropped_clahe/train
-2025-07-24 16:49:43,106 - [KAPTIOS-AROB-BREAST-DATASETS] - INFO - Saving files from train dataframe
-Index(['study_id', 'series_id', 'image_id', 'laterality', 'view_position',
-       'height', 'width', 'breast_birads', 'breast_density',
-       'finding_categories', 'finding_birads', 'xmin', 'ymin', 'xmax', 'ymax',
-       'split', 'absolute_path'],
-      dtype='object')
-Processing batches:   0%|          | 0/153 [00:00<?, ?it/s]Chunk 0/153 - Processing:   0%|          | 0/153 [00:00<?, ?it/s]
-Processing batch:   0%|          | 0/100 [00:00<?, ?it/s][A
-Processing batch:   1%|          | 1/100 [00:00<00:31,  3.13it/s][A
-Processing batch:   7%|▋         | 7/100 [00:00<00:04, 20.32it/s][A
-Processing batch:  15%|█▌        | 15/100 [00:00<00:02, 36.50it/s][A
-Processing batch:  21%|██        | 21/100 [00:00<00:02, 29.46it/s][A
-Processing batch:  25%|██▌       | 25/100 [00:00<00:02, 31.23it/s][A
-Processing batch:  32%|███▏      | 32/100 [00:01<00:01, 37.44it/s][A
-Processing batch:  37%|███▋      | 37/100 [00:01<00:01, 33.97it/s][A
-Processing batch:  42%|████▏     | 42/100 [00:01<00:01, 37.52it/s][A
-Processing batch:  47%|████▋     | 47/100 [00:01<00:01, 36.31it/s][A
-Processing batch:  53%|█████▎    | 53/100 [00:01<00:01, 37.55it/s][A
-Processing batch:  58%|█████▊    | 58/100 [00:01<00:01, 35.81it/s][A
-Processing batch:  63%|██████▎   | 63/100 [00:01<00:01, 35.92it/s][A
-Processing batch:  70%|███████   | 70/100 [00:02<00:00, 41.75it/s][A
-Processing batch:  75%|███████▌  | 75/100 [00:02<00:00, 42.39it/s][A
-Processing batch:  80%|████████  | 80/100 [00:02<00:00, 33.42it/s][A
-Processing batch:  86%|████████▌ | 86/100 [00:02<00:00, 38.94it/s][A
-Processing batch:  93%|█████████▎| 93/100 [00:02<00:00, 39.02it/s][A
-Processing batch:  99%|█████████▉| 99/100 [00:02<00:00, 43.30it/s][A
-                                                                  [AChunk 0/153 - Saving batch to HDF5:   0%|          | 0/153 [00:02<?, ?it/s]Chunk 0/153 - Done in 3.14s:   0%|          | 0/153 [00:03<?, ?it/s]       Chunk 0/153 - Done in 3.14s:   1%|          | 1/153 [00:03<07:56,  3.14s/it]Chunk 1/153 - Processing:   1%|          | 1/153 [00:03<07:56,  3.14s/it]   
-Processing batch:   0%|          | 0/100 [00:00<?, ?it/s][A
-Processing batch:   1%|          | 1/100 [00:00<00:20,  4.77it/s][A
-Processing batch:   6%|▌         | 6/100 [00:00<00:04, 22.20it/s][A
-Processing batch:  15%|█▌        | 15/100 [00:00<00:01, 46.05it/s][A
-Processing batch:  21%|██        | 21/100 [00:00<00:02, 36.71it/s][A
-Processing batch:  26%|██▌       | 26/100 [00:00<00:01, 39.08it/s][A
-Processing batch:  32%|███▏      | 32/100 [00:00<00:01, 41.29it/s][A
-Processing batch:  38%|███▊      | 38/100 [00:01<00:01, 42.86it/s][A
-Processing batch:  43%|████▎     | 43/100 [00:01<00:01, 36.81it/s][A
-Processing batch:  48%|████▊     | 48/100 [00:01<00:01, 38.70it/s][A
-Processing batch:  53%|█████▎    | 53/100 [00:01<00:01, 38.48it/s][A
-Processing batch:  58%|█████▊    | 58/100 [00:01<00:01, 35.75it/s][A
-Processing batch:  65%|██████▌   | 65/100 [00:01<00:00, 39.16it/s][A
-Processing batch:  70%|███████   | 70/100 [00:01<00:00, 39.46it/s][A
-Processing batch:  75%|███████▌  | 75/100 [00:02<00:00, 39.12it/s][A
-Processing batch:  80%|████████  | 80/100 [00:02<00:00, 41.70it/s][A
-Processing batch:  85%|████████▌ | 85/100 [00:02<00:00, 35.20it/s][A
-Processing batch:  89%|████████▉ | 89/100 [00:02<00:00, 36.25it/s][A
-Processing batch:  96%|█████████▌| 96/100 [00:02<00:00, 43.19it/s][A
-                                                                  [AChunk 1/153 - Saving batch to HDF5:   1%|          | 1/153 [00:05<07:56,  3.14s/it]Chunk 1/153 - Done in 3.02s:   1%|          | 1/153 [00:06<07:56,  3.14s/it]       Chunk 1/153 - Done in 3.02s:   1%|▏         | 2/153 [00:06<07:43,  3.07s/it]Chunk 2/153 - Processing:   1%|▏         | 2/153 [00:06<07:43,  3.07s/it]   
-Processing batch:   0%|          | 0/100 [00:00<?, ?it/s][A
-Processing batch:   1%|          | 1/100 [00:00<00:46,  2.14it/s][A
-Processing batch:   2%|▏         | 2/100 [00:00<00:25,  3.79it/s][A
-Processing batch:   4%|▍         | 4/100 [00:00<00:13,  7.14it/s][A
-Processing batch:  11%|█         | 11/100 [00:00<00:04, 22.07it/s][A
-Processing batch:  17%|█▋        | 17/100 [00:00<00:02, 31.71it/s][A
-Processing batch:  22%|██▏       | 22/100 [00:01<00:02, 35.90it/s][A
-Processing batch:  27%|██▋       | 27/100 [00:01<00:02, 27.78it/s][A
-Processing batch:  33%|███▎      | 33/100 [00:01<00:02, 31.59it/s][A
-Processing batch:  38%|███▊      | 38/100 [00:01<00:01, 33.91it/s][A
-Processing batch:  42%|████▏     | 42/100 [00:01<00:01, 34.26it/s][A
-Processing batch:  46%|████▌     | 46/100 [00:01<00:01, 32.95it/s][A
-Processing batch:  52%|█████▏    | 52/100 [00:01<00:01, 36.69it/s][A
-Processing batch:  57%|█████▋    | 57/100 [00:02<00:01, 38.51it/s][A
-Processing batch:  61%|██████    | 61/100 [00:02<00:01, 37.26it/s][A
-Processing batch:  65%|██████▌   | 65/100 [00:02<00:00, 37.64it/s][A
-Processing batch:  71%|███████   | 71/100 [00:02<00:00, 41.29it/s][A
-Processing batch:  76%|███████▌  | 76/100 [00:02<00:00, 37.40it/s][A
-Processing batch:  82%|████████▏ | 82/100 [00:02<00:00, 39.64it/s][A
-Processing batch:  87%|████████▋ | 87/100 [00:02<00:00, 38.41it/s][A
-Processing batch:  94%|█████████▍| 94/100 [00:02<00:00, 44.13it/s][A
-                                                                  [AChunk 2/153 - Saving batch to HDF5:   1%|▏         | 2/153 [00:09<07:43,  3.07s/it]Chunk 2/153 - Done in 3.33s:   1%|▏         | 2/153 [00:09<07:43,  3.07s/it]       Chunk 2/153 - Done in 3.33s:   2%|▏         | 3/153 [00:09<07:58,  3.19s/it]Chunk 3/153 - Processing:   2%|▏         | 3/153 [00:09<07:58,  3.19s/it]   
-Processing batch:   0%|          | 0/100 [00:00<?, ?it/s][A
-Processing batch:   1%|          | 1/100 [00:00<00:24,  3.97it/s][A
-Processing batch:   2%|▏         | 2/100 [00:00<00:23,  4.24it/s][A
-Processing batch:   7%|▋         | 7/100 [00:00<00:05, 16.07it/s][A
-Processing batch:  13%|█▎        | 13/100 [00:00<00:03, 26.66it/s][A
-Processing batch:  18%|█▊        | 18/100 [00:00<00:02, 28.21it/s][A
-Processing batch:  24%|██▍       | 24/100 [00:00<00:02, 34.89it/s][A
-Processing batch:  30%|███       | 30/100 [00:01<00:01, 40.66it/s][A
-Processing batch:  35%|███▌      | 35/100 [00:01<00:01, 34.73it/s][A
-Processing batch:  40%|████      | 40/100 [00:01<00:01, 36.81it/s][A
-Processing batch:  45%|████▌     | 45/100 [00:01<00:01, 35.65it/s][A
-Processing batch:  51%|█████     | 51/100 [00:01<00:01, 38.59it/s][A
-Processing batch:  57%|█████▋    | 57/100 [00:01<00:01, 36.44it/s][A
-Processing batch:  61%|██████    | 61/100 [00:02<00:01, 32.97it/s][A
-Processing batch:  66%|██████▌   | 66/100 [00:02<00:01, 33.03it/s][A
-Processing batch:  74%|███████▍  | 74/100 [00:02<00:00, 42.88it/s][A
-Processing batch:  79%|███████▉  | 79/100 [00:02<00:00, 41.80it/s][A
-Processing batch:  84%|████████▍ | 84/100 [00:02<00:00, 34.24it/s][A
-Processing batch:  88%|████████▊ | 88/100 [00:02<00:00, 32.22it/s][A
-Processing batch:  97%|█████████▋| 97/100 [00:02<00:00, 43.02it/s][A
-                                                                  [AChunk 3/153 - Saving batch to HDF5:   2%|▏         | 3/153 [00:12<07:58,  3.19s/it]Chunk 3/153 - Done in 3.19s:   2%|▏         | 3/153 [00:12<07:58,  3.19s/it]       Chunk 3/153 - Done in 3.19s:   3%|▎         | 4/153 [00:12<07:55,  3.19s/it]Chunk 4/153 - Processing:   3%|▎         | 4/153 [00:12<07:55,  3.19s/it]   
-Processing batch:   0%|          | 0/100 [00:00<?, ?it/s][A
-Processing batch:   1%|          | 1/100 [00:00<00:35,  2.80it/s][A
-Processing batch:   4%|▍         | 4/100 [00:00<00:09, 10.40it/s][A
-Processing batch:  10%|█         | 10/100 [00:00<00:03, 22.96it/s][A
-Processing batch:  15%|█▌        | 15/100 [00:00<00:02, 29.00it/s][A
-Processing batch:  19%|█▉        | 19/100 [00:00<00:02, 31.65it/s][A
-Processing batch:  23%|██▎       | 23/100 [00:00<00:02, 32.73it/s][A
-Processing batch:  29%|██▉       | 29/100 [00:01<00:01, 38.94it/s][A
-Processing batch:  34%|███▍      | 34/100 [00:01<00:01, 38.47it/s][A
-Processing batch:  39%|███▉      | 39/100 [00:01<00:01, 41.45it/s][A
-Processing batch:  44%|████▍     | 44/100 [00:01<00:01, 34.98it/s][A
-Processing batch:  50%|█████     | 50/100 [00:01<00:01, 39.49it/s][A
-Processing batch:  55%|█████▌    | 55/100 [00:01<00:01, 39.58it/s][A
-Processing batch:  60%|██████    | 60/100 [00:01<00:01, 36.70it/s][A
-Processing batch:  64%|██████▍   | 64/100 [00:01<00:00, 36.00it/s][A
-Processing batch:  71%|███████   | 71/100 [00:02<00:00, 43.94it/s][A
-Processing batch:  77%|███████▋  | 77/100 [00:02<00:00, 47.06it/s][A
-Processing batch:  82%|████████▏ | 82/100 [00:02<00:00, 38.31it/s][A
-Processing batch:  87%|████████▋ | 87/100 [00:02<00:00, 38.29it/s][A
-Processing batch:  93%|█████████▎| 93/100 [00:02<00:00, 42.10it/s][A
-Processing batch: 100%|██████████| 100/100 [00:02<00:00, 48.66it/s][A
-                                                                   [AChunk 4/153 - Saving batch to HDF5:   3%|▎         | 4/153 [00:15<07:55,  3.19s/it]Chunk 4/153 - Done in 3.02s:   3%|▎         | 4/153 [00:15<07:55,  3.19s/it]       Chunk 4/153 - Done in 3.02s:   3%|▎         | 5/153 [00:15<07:42,  3.13s/it]Chunk 5/153 - Processing:   3%|▎         | 5/153 [00:15<07:42,  3.13s/it]   
-Processing batch:   0%|          | 0/100 [00:00<?, ?it/s][A
-Processing batch:   1%|          | 1/100 [00:00<00:21,  4.68it/s][A
-Processing batch:   5%|▌         | 5/100 [00:00<00:05, 18.42it/s][A
-Processing batch:  17%|█▋        | 17/100 [00:00<00:02, 36.68it/s][A
-Processing batch:  21%|██        | 21/100 [00:00<00:02, 32.31it/s][A
-Processing batch:  33%|███▎      | 33/100 [00:00<00:01, 43.12it/s][A
-Processing batch:  38%|███▊      | 38/100 [00:01<00:01, 39.94it/s][A
-Processing batch:  43%|████▎     | 43/100 [00:01<00:01, 40.72it/s][A
-Processing batch:  48%|████▊     | 48/100 [00:01<00:01, 37.81it/s][A
-Processing batch:  53%|█████▎    | 53/100 [00:01<00:01, 38.76it/s][A
-Processing batch:  60%|██████    | 60/100 [00:01<00:00, 44.64it/s][A
-Processing batch:  65%|██████▌   | 65/100 [00:01<00:00, 44.45it/s][A
-Processing batch:  70%|███████   | 70/100 [00:01<00:00, 39.77it/s][A
-Processing batch:  77%|███████▋  | 77/100 [00:01<00:00, 46.37it/s][A
-Processing batch:  82%|████████▏ | 82/100 [00:02<00:00, 44.84it/s][A
-Processing batch:  87%|████████▋ | 87/100 [00:02<00:00, 44.77it/s][A
-Processing batch:  92%|█████████▏| 92/100 [00:02<00:00, 45.43it/s][A
-                                                                  [AChunk 5/153 - Saving batch to HDF5:   3%|▎         | 5/153 [00:18<07:42,  3.13s/it]Chunk 5/153 - Done in 2.69s:   3%|▎         | 5/153 [00:18<07:42,  3.13s/it]       Chunk 5/153 - Done in 2.69s:   4%|▍         | 6/153 [00:18<07:18,  2.98s/it]Chunk 6/153 - Processing:   4%|▍         | 6/153 [00:18<07:18,  2.98s/it]   
-Processing batch:   0%|          | 0/100 [00:00<?, ?it/s][A
-Processing batch:   1%|          | 1/100 [00:00<00:16,  6.15it/s][A
-Processing batch:   6%|▌         | 6/100 [00:00<00:04, 23.45it/s][A
-Processing batch:  17%|█▋        | 17/100 [00:00<00:01, 43.37it/s][A
-Processing batch:  24%|██▍       | 24/100 [00:00<00:01, 48.53it/s][A
-Processing batch:  33%|███▎      | 33/100 [00:00<00:01, 52.51it/s][A
-Processing batch:  41%|████      | 41/100 [00:00<00:01, 51.20it/s][A
-Processing batch:  47%|████▋     | 47/100 [00:01<00:01, 47.52it/s][A
-Processing batch:  53%|█████▎    | 53/100 [00:01<00:00, 49.35it/s][A
-Processing batch:  58%|█████▊    | 58/100 [00:01<00:00, 49.28it/s][A
-Processing batch:  63%|██████▎   | 63/100 [00:01<00:00, 48.37it/s][A
-Processing batch:  68%|██████▊   | 68/100 [00:01<00:00, 41.06it/s][A
-Processing batch:  73%|███████▎  | 73/100 [00:01<00:00, 41.76it/s][A
-Processing batch:  80%|████████  | 80/100 [00:01<00:00, 41.72it/s][A
-Processing batch:  89%|████████▉ | 89/100 [00:01<00:00, 51.58it/s][A
-Processing batch:  95%|█████████▌| 95/100 [00:02<00:00, 48.72it/s][A
-                                                                  [AChunk 6/153 - Saving batch to HDF5:   4%|▍         | 6/153 [00:20<07:18,  2.98s/it]Chunk 6/153 - Done in 2.47s:   4%|▍         | 6/153 [00:20<07:18,  2.98s/it]       Chunk 6/153 - Done in 2.47s:   5%|▍         | 7/153 [00:20<06:50,  2.81s/it]Chunk 7/153 - Processing:   5%|▍         | 7/153 [00:20<06:50,  2.81s/it]   
-Processing batch:   0%|          | 0/100 [00:00<?, ?it/s][A
-Processing batch:   1%|          | 1/100 [00:00<00:18,  5.22it/s][A
-Processing batch:   6%|▌         | 6/100 [00:00<00:03, 24.20it/s][A
-Processing batch:  14%|█▍        | 14/100 [00:00<00:01, 43.61it/s][A
-Processing batch:  20%|██        | 20/100 [00:00<00:02, 36.33it/s][A
-Processing batch:  27%|██▋       | 27/100 [00:00<00:01, 41.43it/s][A
-Processing batch:  32%|███▏      | 32/100 [00:00<00:01, 39.37it/s][A
-Processing batch:  38%|███▊      | 38/100 [00:01<00:01, 37.56it/s][A
-Processing batch:  42%|████▏     | 42/100 [00:01<00:01, 37.33it/s][A
-Processing batch:  48%|████▊     | 48/100 [00:01<00:01, 42.76it/s][A
-Processing batch:  54%|█████▍    | 54/100 [00:01<00:01, 45.82it/s][A
-Processing batch:  59%|█████▉    | 59/100 [00:01<00:01, 38.95it/s][A
-Processing batch:  66%|██████▌   | 66/100 [00:01<00:00, 45.53it/s][A
-Processing batch:  71%|███████   | 71/100 [00:01<00:00, 45.54it/s][A
-Processing batch:  76%|███████▌  | 76/100 [00:01<00:00, 37.59it/s][A
-Processing batch:  81%|████████  | 81/100 [00:02<00:00, 39.76it/s][A
-Processing batch:  91%|█████████ | 91/100 [00:02<00:00, 42.95it/s][A
-Processing batch: 100%|██████████| 100/100 [00:02<00:00, 52.00it/s][A
-                                                                   [AChunk 7/153 - Saving batch to HDF5:   5%|▍         | 7/153 [00:23<06:50,  2.81s/it]Chunk 7/153 - Done in 2.71s:   5%|▍         | 7/153 [00:23<06:50,  2.81s/it]       Chunk 7/153 - Done in 2.71s:   5%|▌         | 8/153 [00:23<06:43,  2.78s/it]Chunk 8/153 - Processing:   5%|▌         | 8/153 [00:23<06:43,  2.78s/it]   
-Processing batch:   0%|          | 0/100 [00:00<?, ?it/s][A
-Processing batch:   1%|          | 1/100 [00:00<00:18,  5.25it/s][A
-Processing batch:   6%|▌         | 6/100 [00:00<00:03, 24.33it/s][A
-Processing batch:  14%|█▍        | 14/100 [00:00<00:01, 43.36it/s][A
-Processing batch:  19%|█▉        | 19/100 [00:00<00:02, 34.51it/s][A
-Processing batch:  24%|██▍       | 24/100 [00:00<00:01, 38.07it/s][A
-Processing batch:  32%|███▏      | 32/100 [00:00<00:01, 48.65it/s][A
-Processing batch:  38%|███▊      | 38/100 [00:01<00:01, 39.03it/s][A
-Processing batch:  46%|████▌     | 46/100 [00:01<00:01, 39.76it/s][A
-Processing batch:  52%|█████▏    | 52/100 [00:01<00:01, 42.14it/s][A
-Processing batch:  60%|██████    | 60/100 [00:01<00:00, 44.32it/s][A
-Processing batch:  65%|██████▌   | 65/100 [00:01<00:00, 44.10it/s][A
-Processing batch:  70%|███████   | 70/100 [00:01<00:00, 42.17it/s][A
-Processing batch:  75%|███████▌  | 75/100 [00:01<00:00, 43.73it/s][A
-Processing batch:  80%|████████  | 80/100 [00:01<00:00, 44.33it/s][A
-Processing batch:  85%|████████▌ | 85/100 [00:02<00:00, 39.19it/s][A
-Processing batch:  91%|█████████ | 91/100 [00:02<00:00, 44.01it/s][A
-Processing batch: 100%|██████████| 100/100 [00:02<00:00, 55.23it/s][A
-                                                                   [AChunk 8/153 - Saving batch to HDF5:   5%|▌         | 8/153 [00:25<06:43,  2.78s/it]Chunk 8/153 - Done in 2.66s:   5%|▌         | 8/153 [00:26<06:43,  2.78s/it]       Chunk 8/153 - Done in 2.66s:   6%|▌         | 9/153 [00:26<06:34,  2.74s/it]Chunk 9/153 - Processing:   6%|▌         | 9/153 [00:26<06:34,  2.74s/it]   
-Processing batch:   0%|          | 0/100 [00:00<?, ?it/s][A

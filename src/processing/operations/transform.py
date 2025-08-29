@@ -36,3 +36,25 @@ def resize(image: np.array, new_size=224): #1024
         )
     except Exception as e:
         return None
+
+
+def build_pyramid(image, image_size): #levels=4
+  # resize the image by successive downsampling
+  if image_size == 1024:
+     levels = 1
+  elif image_size == 512:
+      levels = 2
+  elif image_size == 256:
+      levels = 3
+  elif image_size == 128: 
+        levels = 4
+  else:
+     print("Unsupported image size. Supported sizes are 1024, 512, 256, and 128.")
+  pyramid = [image]
+  for i in range(levels - 1):
+      layered = cv2.pyrDown(image)
+      pyramid.append(layered)
+      image = layered
+
+  return pyramid[-1]  
+

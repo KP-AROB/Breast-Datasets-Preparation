@@ -24,7 +24,7 @@ class VindrH5Converter(BaseConverter):
         self.lesions_mapping = {
             'no_finding': '0',
             'mass': '1',
-            'suspicious_calcifications': '2'
+            #'suspicious_calcifications': '2'
         }
         
     def write(self, 
